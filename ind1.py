@@ -38,16 +38,16 @@ class Pair:
         return f"first: {self.__first}, second: {self.__second}"
 
 
-def make_Pair(a, b):
+def make_pair(a, b):
     try:
         return Pair(a, b)
     except ValueError as e:
-        print(str(e))
+        print(str(e), file=sys.stderr)
         exit(1)
 
 
 if __name__ == '__main__':
-    pair = make_Pair(1, 90)
+    pair = make_pair(1, 90)
     print(pair)
     number = int(input("Введите целое число: "))
     result = pair * number
